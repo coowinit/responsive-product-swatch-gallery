@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>色卡切换 + Swiper 轮播 + 图片放大</title>
+
+  <!-- Bootstrap v5.3.3 -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Swiper 11.2.10 -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<section class="deck-gallery-section">
+  <div class="container">
+    <div class="row g-4">
+      <!-- 左侧：主图轮播 + 缩略图 -->
+      <div class="col-lg-6 col-md-12">
+        <div class="deck-gallery-left">
+
+          <!-- 主图轮播 -->
+          <div class="swiper deck-main-swiper">
+            <div class="swiper-wrapper" id="deckMainWrapper"></div>
+
+            <div class="swiper-button-prev deck-main-prev"></div>
+            <div class="swiper-button-next deck-main-next"></div>
+          </div>
+
+          <!-- 缩略图轮播 -->
+          <div class="swiper deck-thumb-swiper">
+            <div class="swiper-wrapper" id="deckThumbWrapper"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 右侧：色卡 -->
+      <div class="col-lg-6 col-md-12">
+        <div class="deck-swatches" id="deckSwatches"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Swiper 11.2.10 -->
+<script src="js/swiper-bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/gallery.js"></script>
+
+</body>
+</html>
