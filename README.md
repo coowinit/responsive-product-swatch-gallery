@@ -302,36 +302,6 @@ css/style.css
    - Folder: `/root`
 6. 保存后等待 GitHub Pages 自动部署。
 
-## GitHub 提交建议
-
-Commit 标题：
-
-```text
-feat: add top multi-select swatch filters
-```
-
-Commit 描述：
-
-```text
-- Move Filter By controls to the top of the gallery
-- Add multi-select filter buttons for product features and color groups
-- Add All reset filter option
-- Auto-select the first available swatch after filtering
-- Document filter tags and match mode in README
-```
-
-Release 标题：
-
-```text
-v1.1.0 - Top Multi-select Swatch Filters
-```
-
-Release 描述：
-
-```text
-This release adds a top-level Filter By section for the product swatch gallery. Users can now filter color swatches by product features and color groups, including SunComfortable, Fire-Rated, Popular, Browns, Greys, Neutrals, and Reds. The filter supports multi-select behavior and includes an All reset button.
-```
-
 ## 依赖说明
 
 当前项目使用本地文件引用：
