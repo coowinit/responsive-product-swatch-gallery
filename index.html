@@ -20,6 +20,12 @@
 
 <section class="deck-gallery-section">
   <div class="container">
+    <!-- 顶部：过滤按钮，独立放在左右两栏上方 -->
+    <div class="deck-filter deck-filter-top" aria-label="Color swatch filters">
+      <span class="deck-filter-label">Filter By:</span>
+      <div class="deck-filter-buttons" id="deckFilterButtons"></div>
+    </div>
+
     <div class="row g-4">
       <!-- 左侧：主图轮播 + 缩略图 -->
       <div class="col-lg-6 col-md-12">
@@ -43,7 +49,10 @@
 
       <!-- 右侧：色卡 -->
       <div class="col-lg-6 col-md-12">
-        <div class="deck-swatches" id="deckSwatches"></div>
+        <div class="deck-swatch-panel">
+          <div class="deck-swatches" id="deckSwatches"></div>
+          <div class="deck-filter-empty" id="deckFilterEmpty" hidden>No matching colors.</div>
+        </div>
       </div>
     </div>
   </div>

@@ -134,7 +134,101 @@ body {
   display: block;
 }
 
-/* 右侧色卡 */
+/* 右侧：色卡 */
+.deck-swatch-panel {
+  width: 100%;
+}
+
+.deck-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  padding-left: 0;
+  margin-bottom: 16px;
+}
+
+/* 顶部过滤栏：放在左右两栏上方，宽度跟 container 一致 */
+.deck-filter-top {
+  margin-bottom: 18px;
+}
+
+.deck-filter-label {
+  flex: 0 0 auto;
+  color: #111111;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.deck-filter-buttons {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+}
+
+.deck-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 26px;
+  padding: 3px 12px;
+  border: 1px solid #d7d7d7;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #111111;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.deck-filter-btn:hover,
+.deck-filter-btn:focus-visible {
+  border-color: #9a9a9a;
+  outline: none;
+}
+
+.deck-filter-btn.is-active {
+  border-color: #006b5b;
+  background: #006b5b;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.deck-filter-dot {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+  background: var(--filter-color, #cccccc);
+  flex: 0 0 auto;
+}
+
+.deck-filter-btn.is-active .deck-filter-dot {
+  border-color: rgba(255, 255, 255, 0.72);
+}
+
+.deck-filter-empty {
+  padding: 22px 10px;
+  color: #777777;
+  font-size: 15px;
+  text-align: center;
+  border: 1px dashed #dddddd;
+  background: #fafafa;
+}
+
+.deck-empty-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777777;
+  font-size: 15px;
+}
+
 .deck-swatches {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -205,8 +299,11 @@ body {
 
 /* 平板 */
 @media (max-width: 991px) {
-  .deck-swatches {
+  .deck-swatch-panel {
     margin-top: 20px;
+  }
+
+  .deck-swatches {
     padding-left: 0;
   }
 }
@@ -215,6 +312,25 @@ body {
 @media (max-width: 575px) {
   .deck-gallery-section {
     padding: 20px 0;
+  }
+
+  .deck-filter {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .deck-filter-label {
+    width: 100%;
+  }
+
+  .deck-filter-buttons {
+    gap: 7px;
+  }
+
+  .deck-filter-btn {
+    min-height: 25px;
+    padding: 3px 10px;
+    font-size: 13px;
   }
 
   .deck-swatches {
